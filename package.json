@@ -1,15 +1,20 @@
 {
   "name": "crud-elysia",
   "version": "1.0.50",
+  "main": "src/server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "test": "bun test",
+    "start:dev": "bun run --watch src/server.ts",
+    "start:prod": "bun run src/server.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@prisma/client": "^5.2.0",
+    "elysia": "latest",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "prisma": "^5.2.0"
   },
   "module": "src/index.js"
 }
